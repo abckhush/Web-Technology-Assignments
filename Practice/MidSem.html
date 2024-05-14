@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rotating Square</title>
+</head>
+<style>
+    .dark{
+        background-color: black;
+        color:white;
+    }
+    #left-column{
+        flex:1;
+        background-color: aqua;
+        text-align: center;
+    }
+    #right-column{
+        flex:1;
+        background-color: blueviolet;
+        text-align: center;
+    }
+    #container{
+        display:flex;
+    }
+    ul{
+        list-style-type: none;
+    }
+    #card:hover{
+        animation: spin 2s linear infinite;
+    }
+    @keyframes  spin {
+        from{
+            transform: rotateY(0deg);
+        }
+        to{
+            transform: rotateY(360deg);
+        }
+    }
+    .scale{
+        transform: scale(0.5);
+    }
+    li:nth-child(even){
+        color: rgb(255,0,0);
+    }
+</style>
+<body>
+    <div id="container">
+        <div id="left-column">
+            <h1>LEFT</h1>
+            <ul>
+                <li>kjhgf</li>
+                <li>kjhgf</li>
+                <li>kjhgf</li>
+                <li>kjhgf</li>
+                <li>kjhgf</li>
+                <li>kjhgf</li>
+                <li>kjhgf</li>
+            </ul>
+        </div>
+        <div id="right-column">
+            <h1>RIGHT</h1>
+            <ul>
+                <li>kjhgf</li>
+                <li>kjhgf</li>
+                <li>kjhgf</li>
+                <li>kjhgf</li>
+                <li>kjhgf</li>
+                <li>kjhgf</li>
+                <li>kjhgf</li>
+            </ul>
+        </div>
+    </div>
+    <button id="bttn" onclick="handleclick();">Switch to Dark Theme</button>
+    <img id="card" src="/card.jpg" width="200px" height="200px" onClick="shrink()">
+    <script>
+        handleclick= function(){
+            document.body.classList.toggle("dark");
+        }
+        shrink= function(){
+            document.getElementById("card").classList.toggle("scale");
+        }
+    </script>
+</body>
+</html>

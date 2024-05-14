@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+        <section>
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </section>
+        <footer>
+            <p>&copy; 2023 My Website. All rights reserved.</p>
+        </footer>
+    <article>
+        <h2>Article Title</h2>
+        <p>Article content goes here.</p>
+    </article>
+    <main>
+        <h1>Main Content Heading</h1>
+        <p>Main content goes here.</p>
+    </main>
+    <aside>
+        <h2>Related Information</h2>
+        <p>Additional content goes here.</p>
+    </aside>
+    <figure>
+        <img src="image.jpg" alt="Description">
+        <figcaption>Image Caption</figcaption>
+    </figure>
+    <div id="container">
+        <p>This is a paragraph inside a generic container.</p>
+    </div>
+    <span style="color: red;">This is inline text with red color.</span>
+    <p>This is <b>bold</b> and <i>italic</i> text.</p>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+    <video controls width="480" height="270">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <video controls width="480" height="270">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        <track kind="captions" label="English" src="captions.vtt" srclang="en" default>
+    </video>
+    <canvas id="myCanvas" width="400" height="200"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "red";
+        ctx.fillRect(10, 10, 50, 50); 
+    </script>
+    <svg width="200" height="200">
+        <rect width="100" height="100" fill="blue" />
+        <circle cx="50" cy="50" r="40" fill="green" />
+        <path d="M10 80 Q 95 10 180 80" fill="transparent" stroke="black" />
+        <text x="20" y="40" font-family="Arial" font-size="20" fill="red">Hello, SVG!</text>
+    </svg>
+    <img src="circle.svg" alt="Circle SVG">
+    <object type="image/svg+xml" data="circle.svg" width="200" height="200">
+        Your browser does not support SVG.
+    </object> 
+</body>
+</html>

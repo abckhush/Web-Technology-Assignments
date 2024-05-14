@@ -1,0 +1,44 @@
+.navbar-brand {
+    font-size: 24px;
+    color: #5b2da1;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.panel {
+    padding-block: 15px;
+    border: 3px solid #490660;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+.panel-body {
+    padding: 20px;
+}
+.form-group {
+    margin-right: 10px;
+    display: inline-block;
+}
+.form-inline {
+    text-align: center;
+}
+button{
+    align-items: center;
+}
+button:hover{
+    background-color:#e3bfff;
+}
+.table {
+    width: 100%;
+    margin: 0;
+}
+td{
+    padding: 5px;
+    text-align: center;
+}
+th{
+    background-color: #dcbdfc;
+    padding: 8px;
+}

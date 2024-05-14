@@ -1,0 +1,81 @@
+<head><style>p{font-size: 30px;}
+nav{
+    background-color: aqua;
+}nav ul li{display: inline-block;}nav ul{ list-style-type: none;} nav ul a{text-decoration: none;}nav ul li:hover{background-color: darkblue;}
+#card{width:200px; height:200px; animation: spin 1s infinite linear;}@keyframes spin{from{transform: rotateX(0deg);}to{transform: rotateX(360deg);}}</style></head>
+<body>
+    <nav>
+        <ul><li><a href="#">Home</a></li><li><a href="#">Contact</a></li><li><a href="#">About</a></li></ul>
+    </nav>
+    <input disabled>Hover</input>
+    <button disabled>kjhg</button>
+    <a href="#bottom"><h1 id="top">TOP</h1></a>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur autem doloremque, ratione earum adipisci, quasi iste ipsum dicta maxime illum architecto, sapiente fuga facere numquam. Magni expedita et est.</p>
+    <a href="#top" id="bottom">BOTTOM</a>
+    <a href="https://www.google.com"><img src="brave_logo.jpg" alt=""></a><br><br><br>
+    <img src="card.jpg" alt="card" id="card">
+    <h1 id="header" class="header">BEFORE</h1>
+    <div id="abcc"></div>
+    <button onClick="handleChange()">Click me!</button>
+    <br><br><br>
+    <input type="text" id="input1" placeholder="Enter Input Value 1">
+    <input type="text" id="input2" placeholder="Enter Input Value 2">
+    <button onClick="calculate('+')">+</button>
+    <button onClick="calculate('-')">-</button>
+    <button onClick="calculate('*')">x</button>
+    <button onClick="calculate('/')">/</button>
+    <div id="result"></div>
+    <script>
+        function handleChange(){
+            var ht=document.getElementById("header");
+            ht.innerHTML = "AFTER";
+            document.body.style.backgroundColor="green";
+            ht.style.color='red';
+            ht.style.fontSize="100px";
+            var bttn=document.createElement('button');
+            bttn.textContent="abc";
+            document.getElementById('abcc').appendChild(bttn);
+            console.log(document.getElementsByClassName('header')[0].innerHTML);
+        }
+        function calculate(operator){
+            var num1= Number.parseInt(document.getElementById('input1').value);
+            var num2= Number.parseInt(document.getElementById('input2').value);
+            var result;
+            switch(operator){
+                case '+':
+                    result=num1+num2;
+                    break;
+                case '-':
+                    result=num1-num2;
+                    break;
+                case '*':
+                    result=num1*num2;
+                    break;
+                case '/':
+                    if(num2!=0){
+                    result=num1/num2;
+                    }else{
+                        result='Error: Division by zero is not allowed';
+                    }
+                    break;
+                default:
+                    result='Invalidd';
+            }
+            document.getElementById('result').textContent=result;
+        }
+    </script>
+</body>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAB-05</title>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        margin-top: 50px;
+    }
+    button{
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    h1{
+        font-size: 24px;
+        color: #333;
+        margin-top: 20px;
+    }
+    p{
+        font-size: 18px;
+        color: #666;
+        margin-top: 20px;
+    }
+    ol{
+        font-size: 18px;
+        color: #666;
+        margin-top: 20px;
+    }
+    li{
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+</head>
+<body>
+<button onclick="makePage();">Click Here</button>
+<script>
+    function makePage() {
+    var heading = document.createElement("h1");
+    heading.textContent = "I am an H1";
+    var paragraph = document.createElement("p");
+    paragraph.textContent = "This is a paragraph followed by a list.";
+    var list = document.createElement("ol");
+    list.setAttribute("type", "I");
+    var item1 = document.createElement("li");
+    item1.textContent = "This is first.";
+    var item2 = document.createElement("li");
+    item2.textContent = "This is second.";
+    list.appendChild(item1);
+    list.appendChild(item2);
+    document.body.appendChild(heading);
+    document.body.appendChild(paragraph);
+    document.body.appendChild(list);
+}
+</script>
+</body>
+</html>
+
+
